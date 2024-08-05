@@ -48,5 +48,6 @@
                 </div>
             </div>
         </div>
+        <x-validation-errors></x-validation-errors>
     </x-slot>
 </x-layout>
