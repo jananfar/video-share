@@ -1,6 +1,6 @@
 <h1 class="new-video-title">
     <i class="fa fa-bolt"></i>
-    محبوب‌ترین‌ها
+    @lang('videos.layout.popular-videos')
 </h1>
 <div class="row">
     @foreach ($mostPopularVideos as $video)

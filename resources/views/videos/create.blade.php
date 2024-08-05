@@ -4,39 +4,44 @@
             <div class="row">
                 <div class="col-md-8">
                     <h1 class="page-title">
-                        <span>آپلود</span>
-                        فیلم
+                        <span>@lang('videos.create.upload')</span>
+                        @lang('videos.create.film')
                     </h1>
                     <form action="{{ route('videos.store') }}" method="POST">
                         @csrf
                         <div class="row">
                             <div class="col-md-6">
-                                <label>عنوان</label>
-                                <input type="text" name="title" class="form-control" placeholder="عنوان">
+                                <label>@lang('videos.create.title')</label>
+                                <input type="text" name="title" class="form-control"
+                                    placeholder="@lang('videos.create.title')">
                             </div>
                             <div class="col-md-6">
-                                <label>مدت زمان</label>
-                                <input type="number" name="length" class="form-control" placeholder="مدت زمان">
+                                <label>@lang('videos.create.length')</label>
+                                <input type="number" name="length" class="form-control"
+                                    placeholder="@lang('videos.create.length')">
                             </div>
                             <div class="col-md-6">
-                                <label>نام یکتا</label>
-                                <input type="text" name="slug" class="form-control" placeholder="نام یکتا">
+                                <label>@lang('videos.create.slug')</label>
+                                <input type="text" name="slug" class="form-control"
+                                    placeholder="@lang('videos.create.slug')">
                             </div>
                             <div class="col-md-6">
-                                <label>آدرس ویدیو</label>
-                                <input type="text" name="url" class="form-control" placeholder="آدرس ویدیو">
+                                <label>@lang('videos.create.url')</label>
+                                <input type="text" name="url" class="form-control"
+                                    placeholder="@lang('videos.create.url')">
                             </div>
                             <div class="col-md-6">
-                                <label>تصویر بندانگشتی</label>
+                                <label>@lang('videos.create.thumbnail')</label>
                                 <input type="text" name="thumbnail" class="form-control"
-                                    placeholder="تصویر بندانگشتی">
+                                    placeholder="@lang('videos.create.thumbnail')">
                             </div>
                             <div class="col-md-12">
-                                <label>توضیحات</label>
-                                <textarea name="description" class="form-control" rows="4" placeholder="توضیح"></textarea>
+                                <label>@lang('videos.create.description')</label>
+                                <textarea name="description" class="form-control" rows="4" placeholder="@lang('videos.create.description')"></textarea>
                             </div>
                             <div class="col-md-6">
-                                <button type="sumbit" id="contact_submit" class="btn btn-dm">ذخیره</button>
+                                <button type="sumbit" id="contact_submit"
+                                    class="btn btn-dm">@lang('videos.create.save')</button>
                             </div>
                         </div>
                     </form>
