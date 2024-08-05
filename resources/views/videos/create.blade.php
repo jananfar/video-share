@@ -12,32 +12,32 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label>@lang('videos.create.title')</label>
-                                <input type="text" name="title" class="form-control"
-                                    placeholder="@lang('videos.create.title')">
+                                <input type="text" name="title" class="form-control" placeholder="@lang('videos.create.title')"
+                                    value="{{ old('title') }}">
                             </div>
                             <div class="col-md-6">
                                 <label>@lang('videos.create.length')</label>
                                 <input type="number" name="length" class="form-control"
-                                    placeholder="@lang('videos.create.length')">
+                                    placeholder="@lang('videos.create.length')" value="{{ old('length') }}">
                             </div>
                             <div class="col-md-6">
                                 <label>@lang('videos.create.slug')</label>
                                 <input type="text" name="slug" class="form-control"
-                                    placeholder="@lang('videos.create.slug')">
+                                    placeholder="@lang('videos.create.slug')" value="{{ old('slug') }}">
                             </div>
                             <div class="col-md-6">
                                 <label>@lang('videos.create.url')</label>
                                 <input type="text" name="url" class="form-control"
-                                    placeholder="@lang('videos.create.url')">
+                                    placeholder="@lang('videos.create.url')" value="{{ old('url') }}">
                             </div>
                             <div class="col-md-6">
                                 <label>@lang('videos.create.thumbnail')</label>
                                 <input type="text" name="thumbnail" class="form-control"
-                                    placeholder="@lang('videos.create.thumbnail')">
+                                    placeholder="@lang('videos.create.thumbnail')" value="{{ old('thumbnail') }}">
                             </div>
                             <div class="col-md-12">
                                 <label>@lang('videos.create.description')</label>
-                                <textarea name="description" class="form-control" rows="4" placeholder="@lang('videos.create.description')"></textarea>
+                                <textarea name="description" class="form-control" rows="4" placeholder="@lang('videos.create.description')">{{ old('description') }}</textarea>
                             </div>
                             <div class="col-md-6">
                                 <button type="sumbit" id="contact_submit"
