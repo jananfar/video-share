@@ -10,8 +10,8 @@ Route::get('/', [IndexController::class, 'index'])->name('index');
 
 // Videos operations routes
 Route::controller(VideoController::class)->prefix('/videos')->group(function () {
-    Route::get('/create', 'create')->name('video.create');
-    Route::post('/', 'store')->name('video.store');
+    Route::get('/create', 'create')->name('videos.create');
+    Route::post('/', 'store')->name('videos.store');
 });
 
 // Dashboard route
