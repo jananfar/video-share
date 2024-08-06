@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreVideoRequest;
+use App\Http\Requests\UpdateVideoRequest;
 use App\Models\Video;
 use Illuminate\Http\Request;
 
@@ -52,7 +53,7 @@ class VideoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Video $video)
+    public function update(UpdateVideoRequest $request, Video $video)
     {
         $video->update($request->all());
         return redirect()->route('videos.show', $video->slug)->with('alert', __('videos.update.success-update'));
