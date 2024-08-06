@@ -2,7 +2,7 @@
     <div class="video-item">
         <div class="thumb">
             <div class="hover-efect"></div>
-            <small class="time">{{ $video->lengthInHuman }}</small>
+            <small class="time">{{ $video->getLengthInHumanAttribute($video->length) }}</small>
             <a href="{{ route('videos.show', $video->slug) }}">
                 <img src="{{ $video->thumbnail }}">
             </a>
