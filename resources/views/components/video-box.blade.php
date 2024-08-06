@@ -3,12 +3,12 @@
         <div class="thumb">
             <div class="hover-efect"></div>
             <small class="time">{{ $video->length }}</small>
-            <a href="#">
+            <a href="{{ route('videos.show', $video->id) }}">
                 <img src="{{ $video->thumbnail }}">
             </a>
         </div>
         <div class="video-info">
-            <a href="#" class="title">
+            <a href="{{ route('videos.show', $video->id) }}" class="title">
                 {{ $video->title }}
             </a>
             <a class="channel-name" href="#">
