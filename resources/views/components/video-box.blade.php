@@ -2,15 +2,20 @@
     <div class="video-item">
         <div class="thumb">
             <div class="hover-efect"></div>
-            <small class="time">{{ $video->length }}</small>
+            <small class="time">{{ $video->lengthInHuman }}</small>
             <a href="{{ route('videos.show', $video->slug) }}">
                 <img src="{{ $video->thumbnail }}">
             </a>
         </div>
         <div class="video-info">
-            <a href="{{ route('videos.show', $video->slug) }}" class="title">
-                {{ $video->title }}
-            </a>
+            <div style="display: flex;">
+                <a href="{{ route('videos.edit', $video->slug) }}">
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                </a>
+                <a href="{{ route('videos.show', $video->slug) }}" class="title" style="margin-right: 5px;">
+                    {{ $video->title }}
+                </a>
+            </div>
             <a class="channel-name" href="#">
                 امیررضا جانانفر
                 <span>
