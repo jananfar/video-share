@@ -20,7 +20,7 @@ class VideoFactory extends Factory
             'title' => $this->faker->name(),
             'slug' => $this->faker->slug(),
             'length' => $this->faker->randomNumber(3),
-            'url' => 'https://videos.pexels.com/video-files/4114797/4114797-uhd_2560_1440_25fps.mp4',
+            'url' => 'https://paytakhtpethospital.com/wp-content/uploads/2024/08/sample-video.mp4',
             'thumbnail' => 'https://picsum.photos/446/240/',
             'description' => $this->faker->realText(100)
         ];
