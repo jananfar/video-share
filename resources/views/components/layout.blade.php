@@ -21,7 +21,7 @@
                         <i class="fa fa-close"></i>
                     </a>
                     <div id="logo">
-                        <a href="#">
+                        <a href="{{ route('index') }}">
                             <img src="{{ Vite::asset('resources/img/logo.png') }}">
                         </a>
                     </div>
