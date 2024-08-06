@@ -36,9 +36,8 @@ class VideoController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Request $request, $video)
+    public function show(Request $request, Video $video)
     {
-        $video = Video::find($video);
         return view('videos.show', compact('video'));
     }
 
