@@ -13,6 +13,8 @@ Route::controller(VideoController::class)->prefix('/videos')->group(function () 
     Route::get('/create', 'create')->name('videos.create');
     Route::post('/', 'store')->name('videos.store');
     Route::get('/{video}', 'show')->name('videos.show');
+    Route::get('/{video}/edit', 'edit')->name('videos.edit');
+    Route::post('/{video}', 'update')->name('videos.update');
 });
 
 // Dashboard route

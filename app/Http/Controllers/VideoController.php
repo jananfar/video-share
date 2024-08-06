@@ -44,17 +44,18 @@ class VideoController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Video $video)
     {
-        //
+        return view('videos.edit', compact('video'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Video $video)
     {
-        //
+        $video->update($request->all());
+        return redirect()->route('videos.show', $video->slug)->with('alert', __('videos.update.success-update'));
     }
 
     /**
