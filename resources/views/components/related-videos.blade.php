@@ -3,11 +3,11 @@
         <div class="related-video-item">
             <div class="thumb">
                 <small class="time">{{ $video->length }}</small>
-                <a href="{{ route('videos.show', $video->id) }}">
+                <a href="{{ route('videos.show', $video->slug) }}">
                     <img src="{{ $video->thumbnail }}">
                 </a>
             </div>
-            <a href="{{ route('videos.show', $video->id) }}" class="title">
+            <a href="{{ route('videos.show', $video->slug) }}" class="title">
                 {{ $video->title }}
             </a>
             <a class="channel-name" href="#">امیررضا جانانفر<span>
