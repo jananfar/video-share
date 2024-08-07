@@ -10,12 +10,14 @@ use Illuminate\View\Component;
 class RelatedVideos extends Component
 {
     public $videos;
+    public $videoSlug;
 
     /**
      * Create a new component instance.
      */
     public function __construct(Video $video)
     {
+        $this->videoSlug = $video->slug;
         $this->videos = $video->relatedVideos(10);
     }
 

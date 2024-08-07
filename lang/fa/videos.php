@@ -5,7 +5,8 @@ return [
         'latest-videos' => 'آخرین ویدیوها',
         'most-viewed-videos' => 'پربازدیدترین ویدیوها',
         'popular-videos' => 'محبوب‌ترین ویدیوها',
-        'videos' => 'ویدیوها'
+        'videos' => 'ویدیوها',
+        'related-videos-not-found' => 'ویدیو مرتبطی یافت نشد!',
     ],
     'create' => [
         'title' => 'عنوان ویدیو',
