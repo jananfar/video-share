@@ -30,6 +30,10 @@
                 <i class="fa fa-clock-o"></i>
                 {{ $video->created_at }}
             </span>
+            <span class="date">
+                <i class="fa fa-tag"></i>
+                {{ $video->category_title }}
+            </span>
         </div>
     </div>
 </div>
