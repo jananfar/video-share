@@ -19,6 +19,10 @@ Route::controller(VideoController::class)->prefix('/videos')->group(function () 
     Route::post('/{video}', 'update')->name('videos.update');
 });
 
+Route::controller(CategoryVideoController::class)->prefix('/categories')->group(function () {
+    Route::get('/{category}/videos', 'index')->name('categories.videos.index');
+});
+
 // Dashboard route
 Route::get('/dashboard', function () {
     return view('dashboard');

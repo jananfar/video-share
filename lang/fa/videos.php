@@ -5,6 +5,7 @@ return [
         'latest-videos' => 'آخرین ویدیوها',
         'most-viewed-videos' => 'پربازدیدترین ویدیوها',
         'popular-videos' => 'محبوب‌ترین ویدیوها',
+        'videos' => 'ویدیوها'
     ],
     'create' => [
         'title' => 'عنوان ویدیو',
