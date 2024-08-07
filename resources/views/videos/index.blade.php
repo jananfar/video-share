@@ -9,5 +9,8 @@
             <x-video-box :video="$video"></x-video-box>
             @endforeach
         </div>
+        <div class="text-center" dir="ltr">
+            {{ $videos->links() }}
+        </div>
     </x-slot>
 </x-layout>

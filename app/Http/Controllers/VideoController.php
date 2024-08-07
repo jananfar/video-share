@@ -15,7 +15,7 @@ class VideoController extends Controller
      */
     public function index()
     {
-        $videos = Video::all();
+        $videos = Video::paginate(12);
         $title = __('videos.layout.videos');
         return view('videos.index', compact('videos', 'title'));
     }
