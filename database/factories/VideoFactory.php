@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,6 +19,7 @@ class VideoFactory extends Factory
     {
         return [
             'title' => $this->faker->name(),
+            'category_id' => Category::first() ?? Category::factory(),
             'slug' => $this->faker->slug(),
             'length' => $this->faker->randomNumber(3),
             'url' => 'https://paytakhtpethospital.com/wp-content/uploads/2024/08/sample-video.mp4',
