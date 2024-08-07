@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryVideoController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VideoController;
@@ -10,6 +11,7 @@ Route::get('/', [IndexController::class, 'index'])->name('index');
 
 // Videos operations routes
 Route::controller(VideoController::class)->prefix('/videos')->group(function () {
+    Route::get('/', 'index')->name('videos.index');
     Route::get('/create', 'create')->name('videos.create');
     Route::post('/', 'store')->name('videos.store');
     Route::get('/{video}', 'show')->name('videos.show');
