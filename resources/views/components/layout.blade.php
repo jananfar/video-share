@@ -77,36 +77,11 @@
             </div>
         </div>
     </header>
-    <div id="main-category">
-        <div class="container-full">
-            <div class="row">
-                <div class="col-md-12">
-                    <ul class="main-category-menu">
-                        <li class="color-1">
-                            <a href="#">
-                                <i class="fa fa-music"></i>
-                                موسیقی
-                            </a>
-                        </li>
-                        <li class="color-2">
-                            <a href="#"><i class="fa fa-soccer-ball-o"></i>
-                                ورزشی
-                            </a>
-                        </li>
-                        <li class="color-3">
-                            <a href="#"><i class="fa fa-gamepad"></i>
-                                بازی
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+    <x-header-menu />
     @if (session('alert'))
-        <div class="alert alert-success">
-            {{ session('alert') }}
-        </div>
+    <div class="alert alert-success">
+        {{ session('alert') }}
+    </div>
     @endif
     <div class="site-output">
         <div id="all-output" class="col-md-12">
