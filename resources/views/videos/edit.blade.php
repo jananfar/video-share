@@ -12,36 +12,40 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label>@lang('videos.create.title')</label>
-                                <input type="text" name="title" class="form-control" placeholder="@lang('videos.create.title')"
-                                    value="{{ $video->title }}">
+                                <input type="text" name="title" class="form-control" placeholder="@lang('videos.create.title')" value="{{ $video->title }}">
                             </div>
                             <div class="col-md-6">
                                 <label>@lang('videos.create.length')</label>
-                                <input type="number" name="length" class="form-control"
-                                    placeholder="@lang('videos.create.length')" value="{{ $video->length }}">
+                                <input type="number" name="length" class="form-control" placeholder="@lang('videos.create.length')" value="{{ $video->length }}">
                             </div>
                             <div class="col-md-6">
                                 <label>@lang('videos.create.slug')</label>
-                                <input type="text" name="slug" class="form-control"
-                                    placeholder="@lang('videos.create.slug')" value="{{ $video->slug }}">
+                                <input type="text" name="slug" class="form-control" placeholder="@lang('videos.create.slug')" value="{{ $video->slug }}">
                             </div>
                             <div class="col-md-6">
                                 <label>@lang('videos.create.url')</label>
-                                <input type="text" name="url" class="form-control"
-                                    placeholder="@lang('videos.create.url')" value="{{ $video->url }}">
+                                <input type="text" name="url" class="form-control" placeholder="@lang('videos.create.url')" value="{{ $video->url }}">
                             </div>
                             <div class="col-md-6">
                                 <label>@lang('videos.create.thumbnail')</label>
-                                <input type="text" name="thumbnail" class="form-control"
-                                    placeholder="@lang('videos.create.thumbnail')" value="{{ $video->thumbnail }}">
+                                <input type="text" name="thumbnail" class="form-control" placeholder="@lang('videos.create.thumbnail')" value="{{ $video->thumbnail }}">
+                            </div>
+                            <div class="col-md-6">
+                                <label>@lang('videos.create.category')</label>
+                                <select name="category_id" class="form-control">
+                                    @foreach($categories as $category)
+                                    <option value="{{ $category->id }}" {{ $category->id == $video->category->id ? 'selected' : '' }}>
+                                        {{ $category->title }}
+                                    </option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="col-md-12">
                                 <label>@lang('videos.create.description')</label>
                                 <textarea name="description" class="form-control" rows="4" placeholder="@lang('videos.create.description')">{{ $video->description }}</textarea>
                             </div>
                             <div class="col-md-6">
-                                <button type="sumbit" id="contact_submit"
-                                    class="btn btn-dm">@lang('videos.update.update')</button>
+                                <button type="sumbit" id="contact_submit" class="btn btn-dm">@lang('videos.update.update')</button>
                             </div>
                         </div>
                     </form>
