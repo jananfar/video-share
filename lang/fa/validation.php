@@ -202,6 +202,7 @@ return [
         'email' => 'آدرس ایمیل',
         'password' => 'رمز عبور',
         'confirm-password' => 'تایید رمز عبور',
+        'name' => 'نام',
     ],
 
 ];

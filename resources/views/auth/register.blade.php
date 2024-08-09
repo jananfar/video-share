@@ -13,21 +13,22 @@
     <div class="form-output">
         <x-validation-errors></x-validation-errors>
         <form action="{{ route('register') }}" method="POST">
+            @csrf
             <div class="form-group label-floating">
                 <label class="control-label">@lang('register.full-name')</label>
-                <input class="form-control" type="text" required>
+                <input class="form-control" type="text" name="name" required>
             </div>
             <div class="form-group label-floating">
                 <label class="control-label">@lang('register.email')</label>
-                <input class="form-control" type="email" required>
+                <input class="form-control" type="email" name="email" required>
             </div>
             <div class="form-group label-floating">
                 <label class="control-label">@lang('register.password')</label>
-                <input class="form-control" type="password" required>
+                <input class="form-control" type="password" name="password" required>
             </div>
             <div class="form-group label-floating">
                 <label class="control-label">@lang('register.confirm-password')</label>
-                <input class="form-control" type="password" required>
+                <input class="form-control" type="password" name="password_confirmation" required>
             </div>
             <div class="remember">
                 <div class="checkbox">
