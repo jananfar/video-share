@@ -19,6 +19,7 @@ Route::controller(VideoController::class)->prefix('/videos')->group(function () 
     Route::post('/{video}', 'update')->name('videos.update');
 });
 
+// Videos operations routes based on the categories
 Route::controller(CategoryVideoController::class)->prefix('/categories')->group(function () {
     Route::get('/{category}/videos', 'index')->name('categories.videos.index');
 });
