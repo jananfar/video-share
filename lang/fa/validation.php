@@ -198,6 +198,10 @@ return [
         'thumbnail' => 'تصویر بندانگشتی',
         'description' => 'توضیحات',
         'category_id' => 'دسته بندی',
+        'register' => 'ثبت نام',
+        'email' => 'آدرس ایمیل',
+        'password' => 'رمز عبور',
+        'confirm-password' => 'تایید رمز عبور',
     ],
 
 ];

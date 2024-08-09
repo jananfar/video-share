@@ -1495,11 +1495,11 @@ h1.new-video-title .fa {
 	padding: 30px;
 }
 
-.sing-up-page {
-	background-color: #ff5e3a;
+.sign-up-page {
+	background-color: #ff5e3a !important;
 }
 
-.sing-up-page:after {
+.sign-up-page:after {
 	content: " ";
 	width: 100%;
 	background-color: #f8f8f8;
@@ -1509,7 +1509,7 @@ h1.new-video-title .fa {
 	top: 0px;
 	z-index: -1;
 	background-attachment: fixed;
-	background-image: url(../demo_img/sing-up-ba.jpg);
+	background-image: url(../img/sing-up-ba.jpg);
 	opacity: 0.2;
 }
 
@@ -1527,7 +1527,7 @@ h1.new-video-title .fa {
 	top: 0px;
 	z-index: -1;
 	background-attachment: fixed;
-	background-image: url(../demo_img/log-in-ba.jpg);
+	background-image: url(../img/log-in-ba.jpg);
 	opacity: 0.2;
 }
 
@@ -2718,7 +2718,7 @@ h1.new-video-title .fa {
 	padding-top: 150px;
 	padding-bottom: 150px;
 	background-attachment: fixed;
-	background-image: url(../demo_img/main.jpg);
+	background-image: url(../img/main.jpg);
 }
 
 #main-page .main-header h1 {
