@@ -41,7 +41,7 @@
             <button type="submit" class="btn btn-lg btn-primary full-width">@lang('register.register')</button>
             <div class="or"></div>
             <p>@lang('register.do-you-have-account')
-                <a href="#">@lang('register.login')</a>
+                <a href="{{ route('login') }}">@lang('register.login')</a>
             </p>
         </form>
     </div>
