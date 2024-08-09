@@ -36,13 +36,14 @@
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-5 hidden-xs hidden-sm"></div>
                 <div class="col-lg-2 col-md-2 col-sm-4 hidden-xs hidden-sm"></div>
+                @auth
                 <div class="col-lg-2 col-md-2 col-sm-3 hidden-xs hidden-sm">
                     <div class="dropdown">
                         <a data-toggle="dropdown" href="#" class="user-area">
                             <div class="thumb">
-                                <img src="https://s.gravatar.com/avatar/ee561b770bfade20798025cb8d4d2759?s=80">
+                                <img src="{{ auth()->user()->gravatar }}">
                             </div>
-                            <h2>امیررضا جانانفر</h2>
+                            <h2>{{ auth()->user()->name }}</h2>
                             <h3>25 اشتراک</h3>
                             <i class="fa fa-angle-down"></i>
                         </a>
@@ -67,13 +68,27 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <i class="fa fa-sign-out color-4"></i>
-                                    خروج
+                                    <form action="{{ route('logout') }}" method="POST">
+                                        @csrf
+                                        <i class="fa fa-sign-out color-4"></i>
+                                        <button type="submit" style="border: none;background-color: transparent;">
+                                            خروج
+                                        </button>
+                                    </form>
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </div>
+                @endauth
+                @guest
+                <a href="{{ route('login') }}">
+                    <button class="btn btn-danger">@lang('register.login')</button>
+                </a>
+                <a href="{{ route('register') }}">
+                    <button class="btn btn-danger">@lang('register.register')</button>
+                </a>
+                @endguest
             </div>
         </div>
     </header>
